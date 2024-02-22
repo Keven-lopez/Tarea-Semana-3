@@ -1,1 +1,73 @@
-﻿
+﻿Estructuras Condicionales
+1.Mayor de Tres Numeros: 
+    int n1, n2, n3;
+
+    Console.WriteLine("Ingrese un numero: ");
+    n1=int.Parse(Console.ReadLine());
+    Console.WriteLine("Ingrese otro numero: ");
+    n2 = int.Parse(Console.ReadLine());
+    Console.WriteLine("Ingrese otro numero: ");
+    n3 = int.Parse(Console.ReadLine());
+    if (n1> n2)
+    {
+        if (n1> n3)
+        {
+            Console.WriteLine("El numero mayor es: " + n1);
+        }
+        else {
+            Console.WriteLine("El numero mayor es: "+n3);
+        }
+    }
+    else
+    {
+        if (n2 > n3)
+        {
+            Console.WriteLine("El numero mayor es: " + n2);
+        }
+        else
+        {
+            Console.WriteLine("El numero mayor es: " + n3);
+        }
+    }
+2. Validar Edad para Ingresar a un Club:
+    int n1;
+
+    Console.WriteLine("Ingrese su edad");
+    try
+    {
+        n1 = int.Parse(Console.ReadLine());
+        if (n1 >= 18)
+        {
+            Console.WriteLine("Puedes ingresar al club");
+        }
+        else
+        {
+            Console.WriteLine("No puedes ingresar al club");
+        }
+    }
+    catch (FormatException)
+    {
+        Console.WriteLine("Formato Invalido. Por favor, ingrese un numero entero.");
+    }
+3. Calcular el Precio Final de un Producto:
+    double n1,resul;
+
+    Console.WriteLine("Ingrese precio original del producto.");
+    try
+    {
+        n1 = double.Parse(Console.ReadLine());
+        if (n1 > 100)
+        {
+            resul = n1-(n1 * .1);
+        }
+        else
+        {
+            resul = n1;
+        }
+        Console.WriteLine("El precio final es: " + resul);
+    }
+    catch (FormatException)
+    {
+        Console.WriteLine("Formato Invalido.");
+    }
+4. Validar Usuario y Contrasena
